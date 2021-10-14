@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-14T13:39:00.238Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="4oHDyIaDq2twTUHNxALU" version="15.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-14T13:44:23.195Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="zxt-iKZvzFF_nldgOTEg" version="15.5.2" type="github">
   <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
     <mxGraphModel dx="1060" dy="595" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -78,7 +78,7 @@
         <mxCell id="60571a20871a0731-4" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;align=center;" parent="1c1d494c118603dd-3" vertex="1">
           <mxGeometry x="105" y="40" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="60571a20871a0731-8" value="Set array of pointers to cell class and initilize objects" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" parent="1c1d494c118603dd-3" vertex="1">
+        <mxCell id="60571a20871a0731-8" value="Initilize the playboard. Set all cells to 0" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" parent="1c1d494c118603dd-3" vertex="1">
           <mxGeometry x="60" y="100" width="140" height="50" as="geometry" />
         </mxCell>
         <mxCell id="yWUKGTw_jDChgxALdWXM-4" value="Parse value from&amp;nbsp; sudoku input to cell object" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" vertex="1" parent="1c1d494c118603dd-3">
