@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-14T18:57:00.906Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="fxyA3NIj0lb0xS3dV5zl" version="15.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-14T18:59:27.195Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="z4yf2FodSNCydhynBROA" version="15.5.2" type="github">
   <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
     <mxGraphModel dx="675" dy="387" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -124,14 +124,11 @@
         <mxCell id="60571a20871a0731-8" value="Initilize the playboard. Set all cells to 0" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" parent="1c1d494c118603dd-3" vertex="1">
           <mxGeometry x="60" y="80" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="yWUKGTw_jDChgxALdWXM-4" value="Parse value from&amp;nbsp; sudoku input to cell object" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" vertex="1" parent="1c1d494c118603dd-3">
-          <mxGeometry x="75" y="160" width="110" height="50" as="geometry" />
+        <mxCell id="yWUKGTw_jDChgxALdWXM-4" value="Parse value from&amp;nbsp; sudoku input to cell object. Value from sudoku input?" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" vertex="1" parent="1c1d494c118603dd-3">
+          <mxGeometry x="30" y="160" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="yWUKGTw_jDChgxALdWXM-5" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1c1d494c118603dd-3">
           <mxGeometry x="110" y="240" width="40" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="yWUKGTw_jDChgxALdWXM-7" value="No value sudoku input" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1c1d494c118603dd-3">
-          <mxGeometry x="10" y="220" width="75" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yWUKGTw_jDChgxALdWXM-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1c1d494c118603dd-3" source="60571a20871a0731-8" target="yWUKGTw_jDChgxALdWXM-4">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -150,9 +147,6 @@
             <mxPoint x="200" y="270" as="sourcePoint" />
             <mxPoint x="230" y="260" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="yWUKGTw_jDChgxALdWXM-13" value="Value sudoku input" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1c1d494c118603dd-3">
-          <mxGeometry x="145" y="220" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yWUKGTw_jDChgxALdWXM-24" value="Go to next cell. End of array?" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" vertex="1" parent="1c1d494c118603dd-3">
           <mxGeometry x="-55" y="420" width="140" height="40" as="geometry" />
@@ -188,7 +182,7 @@
             <Array as="points">
               <mxPoint y="260" />
               <mxPoint y="140" />
-              <mxPoint x="103" y="140" />
+              <mxPoint x="80" y="140" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -207,12 +201,18 @@
             <mxPoint x="320" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="yWUKGTw_jDChgxALdWXM-76" value="true" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1c1d494c118603dd-3">
+          <mxGeometry x="150" y="230" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yWUKGTw_jDChgxALdWXM-77" value="false" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1c1d494c118603dd-3">
+          <mxGeometry x="20" y="230" width="75" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="1c1d494c118603dd-4" value="" style="swimlane;html=1;startSize=20;strokeColor=none;fillColor=none;swimlaneLine=0;" parent="1c1d494c118603dd-1" vertex="1">
           <mxGeometry x="500" y="20" width="250" height="970" as="geometry">
             <mxRectangle x="500" y="20" width="30" height="970" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yWUKGTw_jDChgxALdWXM-15" value="Set cell obj value and flag isSet to true" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" vertex="1" parent="1c1d494c118603dd-4">
+        <mxCell id="yWUKGTw_jDChgxALdWXM-15" value="Set cell value and flag isSet to true" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" vertex="1" parent="1c1d494c118603dd-4">
           <mxGeometry x="-20" y="240" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="yWUKGTw_jDChgxALdWXM-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1c1d494c118603dd-4" source="yWUKGTw_jDChgxALdWXM-15">
