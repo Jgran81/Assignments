@@ -116,23 +116,38 @@ void uniqueCandidate(Cell *sudokuBoard[row][col], int x, int y){
     //3. Checker set to true if no other hypo is detected and false if hypo is detected -> jump out of loop
     //4. If value can be set, run peer() again with that value.
     
+    //Restart from [0][0] if value gets set. Create a new function...
     for(int k=0; k<9; k++){     //Iterate over hypArray. k is position in hypArr
         if(sudokuBoard[x][y]->getHyp(k)>0){     //Get the hypArray value
+        bool row = true;
+        bool col = true;
+        bool box = true;
             for(int l=0; l<8; l++){             //l is position in unit vector
-                if(sudokuRow(sudokuBoard, x, y)[l]->getHyp(k)>0 ||
-                    sudokuCol(sudokuBoard, x, y)[l]->getHyp(k)>0 ||
-                    sudokuBox(sudokuBoard, x, y)[l]->getHyp(k)>0){
-                    //std::cout << "Cell is not set! " << std::endl;
-                    break;
+                if(sudokuRow(sudokuBoard, x, y)[l]->getHyp(k)>0){  
+                    row = false;
                 }
-                else if(l>6){
-                    if(sudokuRow(sudokuBoard, x, y)[l]->getHyp(k)<1 ||
-                        sudokuCol(sudokuBoard, x, y)[l]->getHyp(k)<1 ||
-                        sudokuBox(sudokuBoard, x, y)[l]->getHyp(k)<1);   //Yesus I'm sorry...
+                if(sudokuCol(sudokuBoard, x, y)[l]->getHyp(k)>0){
+                    col = false;
+                }
+                if(sudokuBox(sudokuBoard, x, y)[l]->getHyp(k)>0){
+                    box = false;
+                }
+                if(l>6){
+                    if(row || col || box){   //Yesus I'm sorry...
                         sudokuBoard[x][y]->setCell(k+1);
+                        peer(sudokuBoard, x, y);
+                        //For loop here call the same function from start?
+                        for(int i=0; i<x; i++){
+                            for(int j=0; j<y; j++){
+                                if(!sudokuBoard[i][j]->getState()){
+                                    uniqueCandidate(sudokuBoard, i, j);
+                                }
+                            }
+                        }
                         break;
                         //std::cout << sudokuBoard[x][y]->getValue();
                         //std::cout << "Cell is set! " << std::endl;
+                    }
                         
                 }
             }
@@ -186,7 +201,7 @@ int main(){
             v++; 
         }
     }
-    sudokuBoard[7][2]->printHyp();
+    //sudokuBoard[7][2]->printHyp();
     std::cout << std::endl;
     for(int i=0; i<9; i++){
         for(int j=0; j<9; j++){
