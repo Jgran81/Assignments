@@ -3,50 +3,42 @@
 #include <algorithm>
 #include <iterator>
 
+//Check guess agains the middle number, larger or smaller. 512
+//Move checker up or down 256, 128, 64, 32, 16, 4, 2
+
 
 int main(){
 
+    //Set s and iterator it1
     std::set<int> s;
-    std::set<int>::iterator it1, it2; 
+    std::set<int>::iterator it1; 
     int rNum = 0;
-    for(int i=0; i<32; i++){
-        rNum = rand() % 1000;
+
+    //Populating the set:
+    for(int i=0; i<1024; i++){
+        rNum = rand();
         s.insert(rNum);
     }
-    int guess = 500;
-    std::set<int> t = s;
-    //std::cout << "middle: " << *s.find() << std::endl;
-    /* std::set<int> itlow = s.lower_bound (30);                
-    itup=s.upper_bound (60);  */
-    /* 
-    std::cout << guess << std::endl;
-    s.erase(s.lower_bound(500), s.cend() ); */
-    //it1 = t.begin(); 
-    it2 = t.end();
-    for(int i=0; i<16; i++){
-        it2--;
-    }
-    t.erase(it2, t.cend() );
-    std::cout << *--t.end() << std::endl;
-    if(guess > *--t.end()){
-        it2 = s.end();
-        for(int i=0; i<16; i++){
-        it2--;
-    }
-    }
+    //Random number:
+    int guess = rand();
+    //Setting the iterator for number above the guess number
+    it1 = s.lower_bound(guess);
     
-    //std::cout << s.lower_bound() << std::endl;
-    
-    std::for_each(s.cbegin(), s.cend(), [](int x) {
+    //For printing number in list:
+    /* std::for_each(s.cbegin(), s.cend(), [](int x) {
     std::cout << x << std::endl;
     }); 
-    std::cout << std::endl;
-    std::for_each(t.cbegin(), t.cend(), [](int x) {
-    std::cout << x << std::endl;
-    }); 
-    //std::cout << s.size() << std::endl;
-    /* auto a = s.lower_bound(500);
-    auto b = s.upper_bound(500);
-    std::cout << *a << " : " << *b << std::endl; */ 
+    std::cout << std::endl; */
+
+    std::cout << "Random number: " << guess << std::endl;
+    std::cout << "Number above: " << *it1 << std::endl;
+    //Setting the iterator for number bellow guess:
+    it1--;
+    std::cout << "Number bellow: " << *it1 << std::endl;
+    
     return 0;
 }
+
+/* Random number: 386839851
+Number above: 387346491
+Number bellow: 384370888 */
