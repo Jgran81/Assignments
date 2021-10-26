@@ -4,26 +4,25 @@
 
 class Cell
 {
-private:
+public:
     int value;
-    bool isSet = false;
+    bool set = false;
     int row;
     int col;
-    int hypArray[9] = {1, 1, 1, 1, 1, 1, 1, 1, 1};
+    
+    std::vector<int> hypVector = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 public:
     Cell(int row, int col);
     Cell(int value);
     int getValue();
-    bool getState();
+    bool isSet();
     int getRow();
     int getCol();
     void setCell(int value);
     void removeFromHyp(int a);
     void printCell();
     void printHyp();
-    int getHyp(int i);
 
-    ~Cell();
 };
 
 
