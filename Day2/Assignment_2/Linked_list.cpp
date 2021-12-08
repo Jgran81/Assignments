@@ -73,6 +73,7 @@ int main () { //int argc, char ** argv
     Node_t * MY_LINKED_LIST;
     
     add (MY_LINKED_LIST, 12);
+    print(MY_LINKED_LIST);
     
    /*  add (MY_LINKED_LIST, 152);
     add (MY_LINKED_LIST, 1232);
@@ -84,8 +85,8 @@ int main () { //int argc, char ** argv
     add (MY_LINKED_LIST, 1233); 
     print(MY_LINKED_LIST);
     std::cout<<MY_LINKED_LIST<<std::endl;*/
-    std::cout<<MY_LINKED_LIST->data<<std::endl;
-    std::cout<<MY_LINKED_LIST->next<<std::endl;
+    //std::cout<<MY_LINKED_LIST->data<<std::endl;
+    //std::cout<<MY_LINKED_LIST->next<<std::endl;
     //std::cout<<"Happy endings"<<std::endl;
     
     return 0;

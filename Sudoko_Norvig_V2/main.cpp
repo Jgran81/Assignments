@@ -80,7 +80,7 @@ void sudokuSolver(const std::string s){
     
     
 
-    /* for(int i=0; i<9; i++){
+    for(int i=0; i<9; i++){
         for(int j=0; j<9; j++){
             if(!sudokuBoard[i][j]->isSet()){
                 uniqueCandidate(sudokuBoard, i, j);
@@ -96,7 +96,7 @@ void sudokuSolver(const std::string s){
                 uniqueCandidate(sudokuBoard, i, j);
             }
         }
-    }  */
+    } 
 
     printAfterSecondRule(sudokuBoard); 
     //printHypoState(sudokuBoard);
@@ -292,23 +292,23 @@ void removeFromPeers(Cell *sudokuBoard[row][col], const int x, const int y){
     peerVector.insert(peerVector.end(), boxList.begin(), boxList.end());
     std::set<Cell*> s(peerVector.begin(), peerVector.end());
     peerVector.clear();
-    peerVector.insert(peerVector.end(), s.begin(), s.end()); //vector.insert(vector.end(), set.begin(), set.end());
-
+    peerVector.insert(peerVector.end(), s.begin(), s.end()); 
+    //if (std::find(hypVector.begin(), hypVector.end(), a) != hypVector.end()){
     for (auto i=0; i<peerVector.size(); i++){
+        //if (std::find(peerVector[i]->hypVector.begin(), peerVector[i]->hypVector.end(), sudokuBoard[x][y]->getValue()) != peerVector[i]->hypVector.end()){}
         peerVector[i]->removeFromHyp(sudokuBoard[x][y]->getValue());
-        //uniqueCandidate(sudokuBoard, peerVector[i]->getRow(), peerVector[i]->getCol());
         if (peerVector[i]->isSet()){
             removeFromPeers(sudokuBoard, peerVector[i]->getRow(), peerVector[i]->getCol());
             peerVector.erase(std::remove(peerVector.begin(), peerVector.end(), peerVector[i]), peerVector.end());
         }
     } 
-    for (auto i=0; i<peerVector.size(); i++){
+    /* for (auto i=0; i<peerVector.size(); i++){
         uniqueCandidate(sudokuBoard, peerVector[i]->getRow(), peerVector[i]->getCol());
         if (peerVector[i]->isSet()){
             removeFromPeers(sudokuBoard, peerVector[i]->getRow(), peerVector[i]->getCol());
             peerVector.erase(std::remove(peerVector.begin(), peerVector.end(), peerVector[i]), peerVector.end());
         }
-    }
+    } */
     //Can I add the rowList, colList and boxList in one ?
     //Get rowList and remove hypothetical values from cells in that list
     

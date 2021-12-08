@@ -20,9 +20,14 @@ std::bitset<16> decode(int setValues[]){
     //1011101001011011
 int main(){
 
-    
-    int setValues[5] = {220, 750 ,150, 450, 450};
-    std::cout << decode(setValues) << std::endl;
+    int speed = 220;
+    int frontDist = 750;
+    int rearDist = 150;
+    int rightDist = 450;
+    int leftDist = 450;
+
+    int *setValues[5] = {&speed, &frontDist ,&rearDist, &rightDist, &leftDist};
+    std::cout << decode(*setValues) << std::endl;
     
 
     return 0;

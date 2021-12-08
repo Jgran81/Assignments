@@ -34,7 +34,7 @@ int main(int argc, char* argv[]){
         return 0;
     }
     while (input1 >> word){     //Looping through words in file
-        wordList[word]+=1;      //Add word as key and add to value in map
+        wordList[word]=0;      //Add word as key and add to value in map
     }
    
     //std::cout << wordList.size() << std::endl;
@@ -48,7 +48,9 @@ int main(int argc, char* argv[]){
     }
     
     while (input2 >> word){     //Looping through words in file
-        wordList[word]+=1;      //Add word as key and add to value in map
+        if (wordList.find(word) == wordList.end()){
+            wordList[word]+=1;      //Add word as key and add to value in map
+        }
     }
     input2.close();             //Close second file
     output.open(argv[2], std::ios_base::app);  //Open second file as write in append mode
@@ -59,7 +61,9 @@ int main(int argc, char* argv[]){
     output << std::endl;    //Adding new line to file
 
     for (auto& x: wordList) {   //Looping the map list and print the key and value
-        output << x.first << ": " << x.second << std::endl;
+        if (x.second > 0){
+            output << x.first << ": " << x.second << std::endl;
+        }
     }
     output.close();     //Close second file
     

@@ -1,5 +1,7 @@
+/* "Copyright [2021] <Johan Granholm>" */
 #include <iostream>
 #include <vector>
+#include <memory>
 
 //A car service shop needs to keep track of the records of services 
 //they provide to their customer. Create a system for them so they 
@@ -12,33 +14,41 @@
 
 //Sorry for the 1-file setup, I'm lazy
 
-class service{
-    public:
+
+class service{  
+public:
     int cost;
     unsigned int date;
     std::string service_name;
+    //virtual void newService() = 0;
 
 };
 class oilChange : public service{
-    private:
+private:
     std::string name = "Oil change";
     const int price = 2199;
-    public:
-    oilChange(const unsigned int d){
+public:
+    void newService();
+    oilChange(){
         service_name = name;
         cost = price;
+    }
+    void setDate(const unsigned int d){
         date = d;
     }
 
 };
 class changeAirFilter : public service{
-    private:
+private:
     std::string name = "Change brake pads";
     const int price = 3989;
     public:
-    changeAirFilter(const unsigned int d){
+    void newService();
+    changeAirFilter(){
         service_name = name;
         cost = price;
+    }
+    void setDate(const unsigned int d){
         date = d;
     }
 
@@ -55,11 +65,12 @@ class replaceMuffler : public partsChanged{
     std::string name = "Replace muffler";
     const int price = 1599;
     public:
-    replaceMuffler(const unsigned int d){
+    replaceMuffler(){
         part_changed = name;
         cost = price;
+    }
+    void setDate(const unsigned int d){
         date = d;
-
     }
 };
 class replaceTires : public partsChanged{
@@ -67,9 +78,11 @@ class replaceTires : public partsChanged{
     std::string name = "Replace tires";
     const int price = 5499;
     public:
-    replaceTires(const unsigned int d){
+    replaceTires(){
         part_changed = name;
         cost = price;
+    }
+    void setDate(const unsigned int d){
         date = d;
     }
 };
@@ -102,6 +115,7 @@ class customer{
     std::string name;
     std::vector<std::string> service;
     std::vector<std::string> partsChanged;
+    //std::vector<service->serviceName*> b;
     std::string payWith;
     int paymentDue;
     unsigned int lastVisit;
@@ -156,7 +170,11 @@ public:
             delete customer_list[i];
         }
         customer_list.clear();
-    };
+    }
+    private:
+    carServiceShop (const carServiceShop & that):n_customers (that.n_customers), customer_list (that.customer_list)
+    {
+    }
 };
 
 void newCustomer(carServiceShop &shop){
@@ -175,6 +193,15 @@ void newService(carServiceShop &shop){
     unsigned int choice;
     unsigned int choice_2;
 
+    //Vector of pointers to child classes?
+    oilChange oil();
+    changeAirFilter filter();
+    std::vector<service*> services;
+    services.push_back(&oil());
+    services.push_back(&filter());
+
+
+
     std::cin.ignore();
     std::cout << "Please choose customer: " << std::endl;
     for (auto i=0; i<shop.customer_list.size(); i++){
@@ -182,12 +209,16 @@ void newService(carServiceShop &shop){
     }
     std::cin >> choice;
     std::cout << "What type of service? " << std::endl;
-    std::cout << "1. Oil change \n2. Air filter change" << std::endl;
+    for(auto i=0; i<services.size(); i++){
+        std::cout << i+1 << ". " << services[i]->service_name << std::endl;
+    }
+    //std::cout << "1. Oil change \n2. Air filter change" << std::endl;
     std::cin >> choice_2;
     std::cout << "Please type in date of service (YYMMDD): " << std::endl;
     std::cin >> date;
     if (choice_2 == 1){
-        oilChange oil(date);
+        //oilChange oil();
+        services[0]->
         shop.customer_list[choice-1]->service.push_back(oil.service_name);
         shop.customer_list[choice-1]->paymentDue += oil.cost;
         shop.customer_list[choice-1]->lastVisit = oil.date;

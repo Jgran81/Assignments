@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Include/Cell.hh
+
+/home/jgranho1/Repo/Assignments/Day18/Assignment_2/Cell.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+Cell.hh
+/home/jgranho1/Repo/Assignments/Day18/Assignment_2/Cell.hh
+
+/home/jgranho1/Repo/Assignments/Day18/Assignment_2/main.cpp
+iostream
+-
+vector
+-
+string
+-
+algorithm
+-
+Cell.hh
+/home/jgranho1/Repo/Assignments/Day18/Assignment_2/Cell.hh
+

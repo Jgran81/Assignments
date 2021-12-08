@@ -1,0 +1,155 @@
+Se "git help <kommando>" för att läsa om ett specifikt underkommando
+
+Huvudsakliga porslinskommandon
+   add                  Lägg filinnehåll till indexet
+   am                   Tillämpa en serie patchar från en brevlåda
+   archive              Skapa ett arkiv över filer från ett namngivet träd
+   bisect               Använd binärsökning för att hitta ändringen som introducerade ett fel
+   branch               Visa, skapa eller ta bort grenar
+   bundle               Flytta objekt och referenser efter arkiv
+   checkout             Byt till en ny gren eller återställ filer i arbetskatalogen
+   cherry-pick          Applicera ändringarna introducerade av befintliga incheckningar
+   citool               Grafiskt alternativ till git-commit
+   clean                Ta bort ospårade filer från arbetskatalogen
+   clone                Klona ett arkiv till en ny katalog
+   commit               Protokollför ändringar i arkivet
+   describe             Ge ett objekt användarläsbara namn baserade på en tillgänglig referens
+   diff                 Visa ändringar mellan incheckningar, med arbetskatalogen, osv
+   fetch                Hämta objekt och referenser från annat arkiv
+   format-patch         Förbered patchar för insändning via e-post
+   gc                   Städa onödiga filer och optimera det lokala arkivet
+   gitk                 Bläddraren för Git-arkiv
+   grep                 Visa rader som motsvarar mönster
+   gui                  Ett portabelt grafiskt gränssnitt för Git
+   init                 Skapa tomt Git-arkiv eller ominitiera ett befintligt
+   log                  Visa incheckningsloggar
+   merge                Slå ihop två eller flera utvecklingshistorier
+   mv                   Flytta eller byt namn på en fil, katalog eller symbolisk länk
+   notes                Lägg till eller inspektera objektanteckningar
+   pull                 Hämta från och integrera med annat arkiv eller en lokal gren
+   push                 Uppdatera fjärr-referenser och tillhörande objekt
+   range-diff           Jämför två incheckningsintervall (dvs. två versioner av en gren)
+   rebase               Applicera incheckningar på nytt ovanpå en annan bastopp
+   reset                Återställ aktuell HEAD till angivet tillstånd
+   restore              Återställ filer i arbetskatalogen
+   revert               Återställ några befintliga incheckningar
+   rm                   Ta bort filer från arbetskatalogen och från indexet
+   shortlog             Summera "git log"-utdata
+   show                 Visa olika sorters objekt
+   sparse-checkout      Initiera och modifiera sparse-checkout
+   stash                Spara undan ändringar i en lortig arbetskatalog
+   status               Visa status för arbetskatalogen
+   submodule            Initiera, uppdatera eller inspektera undermoduler
+   switch               Byt gren
+   tag                  Skapa, visa, ta bort eller verifiera GPG-signerat taggobjekt
+   worktree             Hantera ytterligare arbetskataloger
+
+Tilläggskommandon / manipulerare
+   config               Läs och skriv alternativ för arkiv eller globalt
+   fast-export          Exporterare för Git-data
+   fast-import          Bakända för snabba Git-dataimporterare
+   filter-branch        Skriv om grenar
+   mergetool            Kör verktyg för lösning av sammanslagningskonflikter
+   pack-refs            Packa huvuden och taggar för effektiv arkivåtkomst
+   prune                Ta bort alla onåbara objekt från objektdatabasen
+   reflog               Hantera referenslogg-information
+   remote               Hantera uppsättningen spårade arkiv
+   repack               Packa opackade objekt i ett arkiv
+   replace              Skapa, visa, ta bort referenser för att ersätta objekt
+
+Tilläggskommandon / frågare
+   annotate             Kommentera filrader med incheckningsinformation
+   blame                Visa version och författare som sist modifierade varje rad i en fil
+   count-objects        Räkna antal opackade objekt och mängd diskutrymme
+   difftool             Visa ändringar med vanliga diff-verktyg
+   fsck                 Bekräftar konnektivitet och validitet för objektet i databasen
+   gitweb               Git-webbgränssnitt (webbframända för Git-arkiv)
+   help                 Visa hjälpinformation om Git
+   instaweb             Omedelbart bläddra i din arbetskatalog med gitweb
+   merge-tree           Visa trevägssammanslagning utan att röra indexet
+   rerere               Återanvänd sparad lösning av sammanslagningskonflikter
+   show-branch          Visa grenar och deras incheckningar
+   verify-commit        Kontrollera GPG-signaturer för incheckningar
+   verify-tag           Kontrollera GPG-signaturer i taggar
+   whatchanged          Visa loggar med differenser varje incheckning introducerar
+
+Interaktion med andra
+   archimport           Importera ett GNU Arch-arkiv till Git
+   cvsexportcommit      Exportera en enkel incheckning i en CVS-utcheckning
+   cvsimport            Rädda dina data ut ur andra SCM folk älskar att hata
+   cvsserver            En CVS-serveremulator för Git
+   imap-send            Sänd en samling patchar från stdin till en IMAP-mapp
+   p4                   Importera från eller sänd till Perforce-arkiv
+   quiltimport          Tillämpar en quilt-patchuppsättning på aktiv gren
+   request-pull         Skapar en sammanfattning av väntande ändringar
+   send-email           Sänd en uppsättning patchar som e-post
+   svn                  Dubbelriktad verkan mellan ett Subversion-arkiv och Git
+
+Lågnivåkommandon / maniupulerare
+   apply                Tillämpa en patch på filer och/eller indexet
+   checkout-index       Kopiera filer från indexet till arbetskatalogen
+   commit-graph         Skriv och verifiera Git-incheckningsgraffiler
+   commit-tree          Skapa ett nytt incheckningsobjekt
+   hash-object          Beräkna objekt-id och möjligen skapa en blob från en fil
+   index-pack           SKapa pack-indexfiler för ett befintligt packat arkiv
+   merge-file           Kör en trevägs-filsammanslagning
+   merge-index          Kör en sammanslagning för filer som behöver det
+   mktag                Skapar ett taggobjekt
+   mktree               Bygg ett trädobjekt från ls-tree-formaterad text
+   multi-pack-index     Skriv och verifiera multi-pack-index
+   pack-objects         Skapa ett packat arkiv med objekt
+   prune-packed         Ta bort extraobjekt som redan finns i pack-filerna
+   read-tree            Läser trädinformation in i indexet
+   symbolic-ref         Läs, modifiera eller ta bort symbolisk referens
+   unpack-objects       Packa upp objekt från ett pakat arkiv
+   update-index         Registrera filinnehållet från arbetskatalogen i indexet
+   update-ref           Uppdatera objektnamnet i en referens på ett säkert sätt
+   write-tree           Skapa ett trädobjekt från aktuellt index
+
+Lågnivåkommandon / frågare
+   cat-file             Visa innehåller eller typ- och storleksinformation för objekt i arkivet
+   cherry               Hitta incheckningar som ännu inte applicerats uppströms
+   diff-files           Jämför filer i arbetskatalogen och indexet
+   diff-index           Jämför en träd med arbetskatalogen eller indexet
+   diff-tree            Visar innehåll och läge för blobbar som hittats via två trädobjekt
+   for-each-ref         Visa information för varje referens
+   get-tar-commit-id    Hämta inchecknings-id från ett arkiv skapat med git-archive
+   ls-files             Visa information om filer i indexet och arbetskatalogen
+   ls-remote            Lista referenser i ett fjärrarkiv
+   ls-tree              Visa innehållet i ett trädobjekt
+   merge-base           Hitta en så bra anfader som möjligt för sammanslagning
+   name-rev             Hitta symboliska namn för givna referenser
+   pack-redundant       Hitta redundanta pack-filer
+   rev-list             Visa incheckningsobjekt i omvänd kronologisk ordning
+   rev-parse            Plocka ut och massera parametrar
+   show-index           Skapa packat arkivindex
+   show-ref             Visa referenser i ett lokalt arkiv
+   unpack-file          Skapar temporära filer med innehållet från en blob
+   var                  Visa en logisk Git-variabel
+   verify-pack          Bekräfta packade Git-arkivfiler
+
+Lågnivåkommandon / synka arkiv
+   daemon               En riktigt enkel server för Git-arkiv
+   fetch-pack           Ta emot saknade objekt från annat arkiv
+   http-backend         Serversideimplementation av Git över HTTP
+   send-pack            Sänd objekt över Git-protokollet till annat arkiv
+   update-server-info   Uppdatera tilläggsinfofil för att hjälpa dumma servrar
+
+Lågnivåkommandon / interna hjälpare
+   check-attr           Visa information från gitattributes
+   check-ignore         Felsök gitignore / exkluderings-filer
+   check-mailmap        Visa kanoniska namn och e-postadresser för kontakter
+   check-ref-format     Se till att referensen är välformad
+   column               Visa data i kolumner
+   credential           Hämta och spara användarreferenser
+   credential-cache     Hjälpprogram för att tillfälligt lagra lösenord i minnet
+   credential-store     Hjälpprogram för att lagra användarreferenser på disk
+   fmt-merge-msg        Skapa incheckningsmeddelande för en sammanslagning
+   interpret-trailers   Lägg till eller tolka strukturerad information i incheckningsmeddelanden
+   mailinfo             Hämta patch och ägarskap från ett enkelt e-postmeddelande
+   mailsplit            Enkelt program för att dela en UNIX mbox
+   merge-one-file       Förvalt hjälpprogram att använda tillsammans med git-merge-index
+   patch-id             Beräkna unik ID för en patch
+   sh-i18n              Git:s i18n-startkod för skalskript
+   sh-setup             Gemensam skriptstartkod för Git
+   stripspace           Ta bort onödiga blanksteg
